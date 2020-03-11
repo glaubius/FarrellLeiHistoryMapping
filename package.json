@@ -1,0 +1,28 @@
+{
+  "name": "farrellleihistorymapping",
+  "version": "1.0.0",
+  "description": "Leaflet map for Farrell Lei family history",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glaubius/FarrellLeiHistoryMapping.git"
+  },
+  "keywords": [
+    "history",
+    "map",
+    "family",
+    "Leaflet"
+  ],
+  "author": "Jen Glaubius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glaubius/FarrellLeiHistoryMapping/issues"
+  },
+  "homepage": "https://github.com/glaubius/FarrellLeiHistoryMapping#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
