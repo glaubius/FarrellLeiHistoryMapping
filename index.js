@@ -1,8 +1,12 @@
+/*jshint esversion: 6 */
+
 console.log('L', L);
 
 const position = [44.12, -99.2];
+
 const layer = new L.StamenTileLayer("terrain");
 const map = L.map('map').setView(position, 7);
+
 
 map.addLayer(layer);
 
@@ -34,7 +38,7 @@ var locationPopups = {
     { "type": "Feature",
       "properties": {
         "id": 1,
-        "name": "Charles E. Farrell Homestead", "popupContent": "<strong>Charles E. Farrell Homestead</strong> <br>Granted 26 November, 1920 by President Woodrow Wilson <br>east 1/2 of Section 21 in Township 10 N of Range 22 E of the Black Hills Meridian, South Dakota, containing 320 acres",
+        "name": "Charles E. Farrell Homestead", "popupContent": "<strong>Charles E. Farrell Homestead</strong> <br>Granted 26 November, 1920 by President Woodrow Wilson <br>east 1/2 of Section 21 in Township 10 N of Range 22 E of the Black Hills Meridian, South Dakota, containing 320 acres <br> <a href='img/FarrellCharlesEHomestead.jpg'>Homestead Claim</a> ",
       },
     "geometry": {
       "type": "Point",
@@ -43,7 +47,7 @@ var locationPopups = {
     { "type": "Feature",
       "properties": {
         "id": 1,
-        "name": "Giphart Lei Homestead", "popupContent": "<strong>Giphart Lei Homestead</strong> <br>Granted 19 January, 1922 by President Warren G. Harding <br>East 1/2 of the SE 1/4 of Section 19 and SW 1/4 and N 1/2 of the SE 1/4 of Section 20 in Township 16 N of Range 6 E of the Black Hills Meridian, South Dakota, containing 320 acres",
+        "name": "Giphart Lei Homestead", "popupContent": "<strong>Giphart Lei Homestead</strong> <br>Granted 19 January, 1922 by President Warren G. Harding <br>East 1/2 of the SE 1/4 of Section 19 and SW 1/4 and N 1/2 of the SE 1/4 of Section 20 in Township 16 N of Range 6 E of the Black Hills Meridian, South Dakota, containing 320 acres <br> <a href='img/LeiGiphartHomestead.jpg'>Homestead Claim</a>",
       },
     "geometry": {
       "type": "Point",
@@ -61,12 +65,14 @@ L.geoJSON(locationPopups, {
 }).addTo(map);
 
 map.on('popupopen', function(centerMarker) {
-  const zoomLvl = 13;
-  let cM = map.project(centerMarker.popup._latlng);
-
-  cM.y -= centerMarker.popup._container.clientHeight / 2;
-  console.log(map.unproject(cM));
-  map.setView(map.unproject(cM), zoomLvl, {animate: true});
+  var cM = map.project(centerMarker.popup._latlng);
+  map.setView(map.unproject(cM), 13, {animate: true});
 });
+
+function originalZoom(){
+  map.closePopup();
+  map.setView(position, 7);
+};
+
 
 console.log('map', map);
