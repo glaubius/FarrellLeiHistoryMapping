@@ -27,6 +27,7 @@
     "@babel/core": "^7.8.7",
     "express": "^4.17.1",
     "leaflet-easybutton": "^2.4.0",
+    "minimist": "^1.2.5",
     "webpack": "^4.42.0"
   },
   "devDependencies": {
