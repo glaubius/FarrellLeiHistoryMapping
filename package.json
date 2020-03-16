@@ -25,6 +25,7 @@
   "homepage": "https://github.com/glaubius/FarrellLeiHistoryMapping#readme",
   "dependencies": {
     "@babel/core": "^7.8.7",
+    "braces": "^3.0.2",
     "express": "^4.17.1",
     "leaflet-easybutton": "^2.4.0",
     "minimist": "^1.2.5",
