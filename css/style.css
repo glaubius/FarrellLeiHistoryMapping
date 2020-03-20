@@ -7,3 +7,8 @@ html, body {
   width: 960px;
   height: 500px;
 }
+
+.dark-section {
+  background-color: #000000;
+  color: white;
+}
