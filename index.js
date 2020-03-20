@@ -5,7 +5,9 @@ console.log('L', L);
 const position = [44.12, -99.2];
 
 const layer = new L.StamenTileLayer("terrain");
-const map = L.map('map').setView(position, 7);
+const map = L.map('map', {
+  scrollWheelZoom: false
+}).setView(position, 7);
 
 
 map.addLayer(layer);
