@@ -12,3 +12,9 @@ html, body {
   background-color: #000000;
   color: white;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
