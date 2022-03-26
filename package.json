@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "leaflet-easybutton": "^2.4.0",
     "leaflet-modal": "^0.2.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "webpack": "^4.42.0"
   },
   "devDependencies": {
